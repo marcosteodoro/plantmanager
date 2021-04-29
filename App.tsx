@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native'
+import AppLoading from 'expo-app-loading'
 import { Welcome } from './src/pages/Welcome'
 import {
   useFonts,
@@ -14,7 +14,7 @@ export default function App() {
   })
 
   if (!fontsLoaded) {
-    return <Text>Fonte ainda não carregou</Text>
+    return <AppLoading />
   }
 
   return <Welcome />
